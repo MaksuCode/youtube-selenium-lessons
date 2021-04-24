@@ -20,11 +20,11 @@ public class BaseTest {
         practiceFormPage = new PracticeFormPage(driver);
     }
 
-    @AfterAll
-    public void tearDown(){
-        driver.quit();
-        System.out.println("Test finished.");
-    }
+//    @AfterAll
+//    public void tearDown(){
+//        driver.quit();
+//        System.out.println("Test finished.");
+//    }
 
 
 
