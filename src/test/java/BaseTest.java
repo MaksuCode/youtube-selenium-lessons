@@ -1,18 +1,15 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class BaseTest {
 
     protected WebDriver driver ;
 
     @BeforeAll
-    public void setUp(){
+    public static void setUp(){
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
         System.out.println("Test initiated.");
     }
@@ -26,7 +23,6 @@ public class BaseTest {
     public void afterMethod(){
         driver.quit();
     }
-
 
 //    @AfterAll
 //    public void tearDown(){
