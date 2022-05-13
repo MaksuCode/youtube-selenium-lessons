@@ -27,5 +27,9 @@ public class Test_Gender_Selection extends BaseTest{
                 "Other radio button is not checked!");
     }
 
+    public static void main(String[] args) {
+        System.out.printf("Mustafa");
+    }
+
 
 }
